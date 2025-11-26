@@ -1,0 +1,581 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="גלי את קולקציית שמלות הכלה הצנועות והיפות שלנו במחירים שפויים. מיקה מציעה שמלות כלה מיובאות באיכות גבוהה במחירים נגישים לכל כלה.">
+  <meta name="keywords" content="שמלת כלה צנועה, שמלות כלה במחירים שפויים, שמלות כלה זולות ויפות, שמלות כלה">
+  <title>גלי שמלת כלה צנועה במחיר שפוי — מיקה שמלות כלה במחירים שפויים</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: static;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: 'e73261c2-b647-4231-97bd-7bcbed3342c0',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/logo.webp" alt="מיקה שמלות כלה במחירים שפויים" class="logo" />
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="התקשרי אלינו">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/collection">הקולקציה שלנו</a></li>
+        <li><a href="/about">אודות</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">צרי קשר</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img class="hero-bg" data-placeholder="hero-1" data-context="Elegant bride wearing a modest white wedding dress with delicate lace details, standing in a bright, romantic bridal salon with soft natural lighting" src="assets/hero-hero-1.webp" alt="כלה יפהפייה בשמלת כלה צנועה ואלגנטית">
+    <div class="container hero-content">
+      <h1>שמלת כלה צנועה שתגשים את החלום שלך</h1>
+      <h3>קולקציית שמלות כלה מיובאות במחירים שפויים - יופי, איכות וצניעות במקום אחד</h3>
+      <div class="hero-cta">
+        <a href="/collection" class="btn-primary">גלי את הקולקציה</a>
+        <a href="/contact" class="btn-secondary">קבעי פגישה</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="container">
+      <div class="welcome-content">
+        <h2>ברוכה הבאה למיקה - שמלות כלה במחירים שפויים</h2>
+        <p>אנחנו מאמינות שכל כלה ראויה לשמלת כלה צנועה ויפהפייה שלא תשבור את הבנק. במיקה, אנחנו מציעות קולקציה נבחרת של שמלות כלה מיובאות באיכות פרמיום במחירים שפויים ונגישים. כל שמלה בקולקציה שלנו נבחרה בקפידה כדי לשלב בין צניעות, אלגנטיות ועיצוב עכשווי.</p>
+        <p>הקולקציה שלנו כוללת שמלות כלה זולות ויפות במגוון סגנונות - מקלאסי ורומנטי ועד מודרני ומינימליסטי. בין אם את מחפשת שמלה עם תחרה עדינה, חרוזים נוצצים או עיצוב נקי ופשוט, תמצאי אצלנו את השמלה המושלמת ליום המיוחד שלך.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-dresses">
+    <div class="container">
+      <h2>שמלות כלה נבחרות מהקולקציה</h2>
+      <div class="dresses-grid">
+        <div class="dress-card">
+          <div class="dress-image">
+            <img data-placeholder="service-1" data-context="Elegant modest wedding dress with long lace sleeves, high neckline, and flowing A-line skirt, displayed on a mannequin in a bright bridal boutique" src="assets/service-service-1.webp" alt="שמלת כלה צנועה עם שרוולי תחרה ארוכים">
+          </div>
+          <div class="dress-info">
+            <h3>שמלת תחרה קלאסית</h3>
+            <p>שמלת כלה צנועה עם שרוולי תחרה ארוכים, צווארון גבוה וחצאית A-line נשפכת. מושלמת לכלה שמחפשת אלגנטיות קלאסית.</p>
+          </div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-image">
+            <img data-placeholder="service-2" data-context="Modern minimalist modest wedding dress with clean lines, three-quarter sleeves, and simple elegant silhouette, shown in a contemporary bridal setting" src="assets/service-service-2.webp" alt="שמלת כלה מינימליסטית וצנועה">
+          </div>
+          <div class="dress-info">
+            <h3>שמלה מינימליסטית מודרנית</h3>
+            <p>עיצוב נקי ומודרני עם קווים פשוטים, שרוולים באורך שלושת רבעים וסילואט אלגנטי. אידיאלית לכלה העכשווית.</p>
+          </div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-image">
+            <img data-placeholder="service-3" data-context="Romantic modest wedding dress with delicate beading, long illusion sleeves, and soft tulle skirt, beautifully lit in an elegant bridal salon" src="assets/service-service-3.webp" alt="שמלת כלה רומנטית עם חרוזים">
+          </div>
+          <div class="dress-info">
+            <h3>שמלה רומנטית מעוטרת</h3>
+            <p>שמלת כלה זולה ויפה עם חרוזים עדינים, שרוולי אשליה ארוכים וחצאית טול רכה. משלבת רומנטיקה וצניעות.</p>
+          </div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-image">
+            <img data-placeholder="service-4" data-context="Vintage-inspired modest wedding dress with intricate lace details, long sleeves, and elegant train, displayed against a soft romantic background" src="assets/service-service-4.webp" alt="שמלת כלה בהשראה וינטג'">
+          </div>
+          <div class="dress-info">
+            <h3>שמלה בהשראה וינטג'</h3>
+            <p>תחרה מורכבת ומפורטת, שרוולים ארוכים ורכבת אלגנטית. שמלת כלה צנועה המשלבת קסם של פעם עם נוחות מודרנית.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose">
+    <div class="container">
+      <h2>למה לבחור במיקה?</h2>
+      <div class="reasons-grid">
+        <div class="reason-item">
+          <div class="reason-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3>מחירים שפויים</h3>
+          <p>שמלות כלה במחירים שפויים ונגישים ללא פשרות על איכות. אנחנו מאמינות שכל כלה ראויה לשמלה יפה במחיר הוגן.</p>
+        </div>
+        <div class="reason-item">
+          <div class="reason-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>צניעות ואלגנטיות</h3>
+          <p>כל שמלה בקולקציה שלנו משלבת צניעות מלאה עם עיצוב אלגנטי ועכשווי. שמלות כלה צנועות שלא מתפשרות על סטייל.</p>
+        </div>
+        <div class="reason-item">
+          <div class="reason-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>איכות פרמיום</h3>
+          <p>שמלות כלה מיובאות מחומרים איכוtiים עם תפירה מעולה. שמלות כלה זולות ויפות שנראות ומרגישות יוקרתיות.</p>
+        </div>
+        <div class="reason-item">
+          <div class="reason-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <h3>שירות אישי</h3>
+          <p>ליווי מקצועי ואישי לאורך כל הדרך. אנחנו כאן כדי לעזור לך למצוא את שמלת הכלה הצנועה המושלמת עבורך.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2>התהליך שלנו - פשוט וקל</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>קבעי פגישה</h3>
+          <p>צרי קשר לקביעת פגישה אישית בסלון שלנו. נשמח לקבל אותך במועד שנוח לך.</p>
+        </div>
+        <div class="step-arrow">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>מדדי שמלות</h3>
+          <p>נעזור לך למדוד שמלות מהקולקציה ונמצא יחד את השמלה המושלמת שמתאימה לך בדיוק.</p>
+        </div>
+        <div class="step-arrow">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>התאמות אישיות</h3>
+          <p>נבצע התאמות אישיות לפי הצורך כדי שהשמלה תתאים לך בצורה מושלמת.</p>
+        </div>
+        <div class="step-arrow">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>קחי הביתה</h3>
+          <p>קבלי את שמלת החלומות שלך ותהני מיום החתונה המושלם!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>מה הכלות שלנו אומרות</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"מצאתי אצל מיקה את שמלת הכלה הצנועה המושלמת במחיר מדהים! השירות היה מקצועי ואישי, והשמלה הייתה יפהפייה. ממליצה בחום!"</p>
+          <div class="testimonial-author">
+            <strong>שרה כ.</strong>
+            <span>כלה מרוצה</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"חיפשתי שמלות כלה זולות ויפות והגעתי למיקה. לא האמנתי שאמצא שמלה כל כך יפה במחיר שפוי! הקולקציה מגוונת והאיכות מעולה."</p>
+          <div class="testimonial-author">
+            <strong>רחל ל.</strong>
+            <span>כלה מאושרת</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"שמלת כלה במחירים שפויים זה לא חלום - זו המציאות במיקה! קיבלתי שירות מעולה ושמלה שגרמה לי להרגיש כמו נסיכה. תודה רבה!"</p>
+          <div class="testimonial-author">
+            <strong>מרים ד.</strong>
+            <span>כלה מרוצה מאוד</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>מוכנה למצוא את שמלת החלומות שלך?</h2>
+        <p>בואי לבקר אותנו בסלון ונעזור לך למצוא את שמלת הכלה הצנועה המושלמת במחיר שפוי. הקולקציה שלנו מחכה לך!</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn-primary">קבעי פגישה עכשיו</a>
+          <a href="/collection" class="btn-secondary">צפי בקולקציה המלאה</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 מיקה שמלות כלה במחירים שפויים. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="privacy.html" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="accessibility.html" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="terms.html" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות <a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = 'e73261c2-b647-4231-97bd-7bcbed3342c0';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          header.style.display = 'block';
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+    <script src="script.js"></script>
+</body></html>
